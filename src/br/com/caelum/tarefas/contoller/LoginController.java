@@ -11,7 +11,12 @@ import br.com.caelum.tarefas.modelo.Usuario;
 @Controller
 public class LoginController{
     
-  @RequestMapping("loginForm")
+	 @RequestMapping("index")
+	  public String pagInicial() {
+	    return "index";
+	  }
+	
+	@RequestMapping("loginForm")
   public String loginForm() {
     return "formulario-login";
   }

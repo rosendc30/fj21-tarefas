@@ -24,7 +24,9 @@
 <input type="checkbox" name="finalizado" 
 value="true" ${tarefa.finalizado? 'checkd' : '' } /> <br />
 
-
+<label>Data de Finalização</label>
+<input type="text" name="dataFinalizacao" value="${tarefa.dataFinalizacao.time}" pattern="dd/MM/yyyy" />
+<br/>
  
 <input type="submit" value="ALTERAR"/>
 
