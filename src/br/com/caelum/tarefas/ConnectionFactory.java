@@ -9,8 +9,8 @@ public class ConnectionFactory {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			
-		return DriverManager.getConnection("jdbc:mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT//fj21tarefas",
-					"adminaDbbics", "Fpg7M_UIKc4D");
+		return DriverManager.getConnection("jdbc:mysql://localhost/fj21",
+					"root", "123456");
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
