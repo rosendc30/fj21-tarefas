@@ -61,7 +61,7 @@ public class ContatoDao {
 			while (rs.next()) {
 				// criando o objeto Contato
 				Contato contato = new Contato();
-				contato.setId(rs.getLong("id"));
+				contato.setIdContato(rs.getLong("idContato"));
 				contato.setNome(rs.getString("nome"));
 				contato.setEmail(rs.getString("email"));
 				contato.setEndereco(rs.getString("endereco"));
@@ -94,7 +94,7 @@ public class ContatoDao {
 	         stmt.setString(3, contato.getEndereco());
 	         stmt.setDate(4, new Date(contato.getDataNascimento()
 	                 .getTimeInMillis()));
-	         stmt.setLong(5, contato.getId());
+	         stmt.setLong(5, contato.getIdContato());
 	         stmt.execute();
 	         stmt.close();
 	     } catch (SQLException e) {
@@ -106,7 +106,7 @@ public class ContatoDao {
 	     try {
 	         PreparedStatement stmt = connection
 	                 .prepareStatement("delete from contatos where id=?");
-	         stmt.setLong(1, contato.getId());
+	         stmt.setLong(1, contato.getIdContato());
 	         stmt.execute();
 	         stmt.close();
 	     } catch (SQLException e) {

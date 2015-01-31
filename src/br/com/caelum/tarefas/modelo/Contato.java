@@ -4,17 +4,17 @@ import java.util.Calendar;
 
 public class Contato {
 	
-	private Long id;
+	private Long idContato;
 	private String nome;
 	private String email;
 	private String endereco;
 	private Calendar dataNascimento;
 	
-	public Long getId() {
-		return id;
+	public Long getIdContato() {
+		return idContato;
 	}
-	public void setId(Long id) {
-		this.id = id;
+	public void setIdContato(Long idContato) {
+		this.idContato = idContato;
 	}
 	public String getNome() {
 		return nome;

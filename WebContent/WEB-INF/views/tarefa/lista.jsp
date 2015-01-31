@@ -26,9 +26,10 @@
 
   <br /> <br />        
 
-  <table>
+  <table border="1" bordercolor="blue">
   <tr>
     <th>Id</th>
+    
     <th>Descrição</th>
     <th>Finalizado?</th>
     <th>Data de finalização</th>
@@ -37,7 +38,9 @@
   
  <c:forEach items="${tarefas}" var="tarefa">
 <tr id="tarefa_${tarefa.id}">
+
   <td>${tarefa.id}</td>
+ 
   <td>${tarefa.descricao}</td>
   
   <c:if test="${tarefa.finalizado eq true}">

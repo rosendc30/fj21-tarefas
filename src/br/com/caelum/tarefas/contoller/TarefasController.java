@@ -25,16 +25,13 @@ public class TarefasController {
   public String form() {
     return "tarefa/formulario";
   }
-
-  
   
   @RequestMapping("adicionaTarefa")
   public String adiciona(@Valid Tarefa tarefa, BindingResult result) {
     
     if(result.hasFieldErrors("descricao")) {
       return "tarefa/formulario";
-    }    
-
+    }  
    // TarefaDao dao = new TarefaDao();
     dao.adiciona(tarefa);
     return "tarefa/tarefa-adicionada";
